@@ -1,6 +1,6 @@
-<h2>#Tseriesheatmap</h2>
-<h3> Heat Map for Time Series using Quantmod </h3>
-<h3>Heat Map for stock correlation matrix using Quandl</h3>
+<h2>#Time Series Heatmap</h2>
+<h3> Heat Map for Equitiy Time Series using Quantmod </h3>
+<h3>Heat Map for Equity correlation matrix using Quandl</h3>
 
 
 #Libraries
