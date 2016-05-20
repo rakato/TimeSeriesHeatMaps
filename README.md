@@ -1,4 +1,5 @@
-<h2>#Time Series Heatmap</h2>
+#Time Series Heatmaps
+
 <h3> Heat Map for Equitiy Time Series using Quantmod </h3>
 <h3>Heat Map for Equity correlation matrix using Quandl</h3>
 
