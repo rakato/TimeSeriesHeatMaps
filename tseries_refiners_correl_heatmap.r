@@ -11,8 +11,7 @@ CVI <- Quandl("YAHOO/CVI", start_date = my_start_date, type = "xts")
 PBF <- Quandl("YAHOO/PBF", start_date = my_start_date, type = "xts")
 
 
-# Depending on the index, the final price for each day is either
-# "Adjusted Close" or "Close Price".  Extract this single column for each:
+#Get closing prices
 VLOc <- VLO[,"Close"]
 TSOc <- TSO[,"Close"]
 HFCc<- HFC[,"Close"]
@@ -34,10 +33,10 @@ colnames(z) <- myColnames
 # Cast back to an xts object:
 mktPrices <- as.xts(z)
 
-# Next, calculate log returns:
+# Get returns
 mktRtns <- diff(log(mktPrices), lag = 1)
 head(mktRtns)
-mktRtns <- mktRtns[-1, ]  # Remove resulting NA in the 1st row
+mktRtns <- mktRtns[-1, ]  # Remove 1st row NA
 
 
 
@@ -59,7 +58,7 @@ generate_heat_map <- function(correlationMatrix, title)
 }
 
 
-
+#We round the numbers to cut off decimal point places and create a couple diff corr maps for last years
 corr1 <- round(cor(mktRtns) * 100,2)
 corr2 <- round(cor(mktRtns['2015-01']) * 100, 2)
 corr3 <- round(cor(mktRtns['2016-01']) * 100, 2)
