@@ -2,7 +2,7 @@
 require(quantmod)
 require(ggplot2)
 require(reshape2)
-require(plyr)
+require(dplyr)
 require(scales)
 
 getSymbols("VLO",src="yahoo")
