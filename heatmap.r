@@ -1,9 +1,9 @@
 
-require(quantmod)
-require(ggplot2)
-require(reshape2)
-require(dplyr)
-require(scales)
+library(quantmod)
+library(ggplot2)
+library(reshape2)
+library(dplyr)
+library(scales)
 
 getSymbols("VLO",src="yahoo")
 
