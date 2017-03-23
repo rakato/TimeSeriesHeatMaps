@@ -10,7 +10,7 @@ getSymbols("VLO",src="yahoo")
 
 dat<-data.frame(date=index(VLO),VLO)
 
-
+#setting year, month, weekday
 dat$year<-as.numeric(as.POSIXlt(dat$date)$year+1900)
 dat$month<-as.numeric(as.POSIXlt(dat$date)$mon+1)
 dat$monthf<-factor(dat$month,levels=as.character(1:12),labels=c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"),ordered=TRUE)
