@@ -4,6 +4,7 @@ library(ggplot2)
 library(reshape2)
 library(dplyr)
 library(scales)
+library(plotly)
 
 getSymbols("VLO",src="yahoo")
 
@@ -28,7 +29,7 @@ z<- ggplot(dat, aes(monthweek, weekdayf, fill = VLO.Close)) +
    
 z
 
-
+ggplotly(z)
 
 
 
